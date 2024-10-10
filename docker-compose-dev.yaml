@@ -1,0 +1,12 @@
+services:
+
+    monerod:
+        container_name: monerod
+        build: .
+        environment:
+            - PROXY_URL=socks5://${TORSOCKS_TOR_ADDRESS}:9050
+            - PRUNE_BLOCKCHAIN=true
+        volumes:
+            - "./data-local:/media/monerod"
+        ports:
+            - "127.0.0.1:18081:18081"
