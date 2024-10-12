@@ -26,6 +26,7 @@ WORKDIR /opt/monero
 COPY --from=builder /root/builder/* .
 COPY files/entrypoint.sh files/healthcheck.sh files/run.sh /usr/local/bin/
 
+ENV BATCH_SIZE="10"
 ENV PROXY_URL=""
 ENV PRUNE_BLOCKCHAIN="false"
 

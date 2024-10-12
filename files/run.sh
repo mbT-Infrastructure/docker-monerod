@@ -11,5 +11,6 @@ if [[ "$PRUNE_BLOCKCHAIN" == "true" ]]; then
     ADDITIONAL_ARGUMENTS+=("--prune-blockchain")
 fi
 
-/opt/monero/monerod "${ADDITIONAL_ARGUMENTS[@]}" --confirm-external-bind --data-dir /media/monerod \
-    --in-peers 100 --non-interactive --restricted-rpc --rpc-bind-ip 0.0.0.0 "$@"
+/opt/monero/monerod "${ADDITIONAL_ARGUMENTS[@]}" --block-sync-size "$BATCH_SIZE" \
+    --confirm-external-bind --data-dir /media/monerod --in-peers 100 --non-interactive \
+    --restricted-rpc --rpc-bind-ip 0.0.0.0 "$@"
