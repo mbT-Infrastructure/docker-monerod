@@ -1,4 +1,4 @@
-FROM madebytimo/builder AS builder
+FROM --platform=$BUILDPLATFORM madebytimo/builder AS builder
 
 ARG TARGETPLATFORM
 

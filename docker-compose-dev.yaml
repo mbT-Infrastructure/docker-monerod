@@ -11,3 +11,4 @@ services:
             - "./data-local:/media/monerod"
         ports:
             - "127.0.0.1:18081:18081"
+            - "127.0.0.1:18082:18082"

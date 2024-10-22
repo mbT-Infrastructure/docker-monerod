@@ -12,8 +12,12 @@ This Container image extends the [base image].
 
 ### Environment variables
 
--   `VARIABLE`
-    -   Set to `true` to enable ..., default: ``.
+-   `BATCH_SIZE`
+    -   How many blocks are processed in a single batch during chain synchronization, default: `10`.
+- `PROXY_URL`
+    - Run network communication through specified proxy.
+- `PRUNE_BLOCKCHAIN`
+    - Remove non-critical blockchain information from the local blockchain.
 
 ### Volumes
 

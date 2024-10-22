@@ -12,5 +12,5 @@ if [[ "$PRUNE_BLOCKCHAIN" == "true" ]]; then
 fi
 
 /opt/monero/monerod "${ADDITIONAL_ARGUMENTS[@]}" --block-sync-size "$BATCH_SIZE" \
-    --confirm-external-bind --data-dir /media/monerod --in-peers 100 --non-interactive \
-    --restricted-rpc --rpc-bind-ip 0.0.0.0 "$@"
+    --confirm-external-bind --data-dir /media/monerod --in-peers 100 --log-file /dev/null \
+    --non-interactive --restricted-rpc --rpc-bind-ip 0.0.0.0 "$@"
